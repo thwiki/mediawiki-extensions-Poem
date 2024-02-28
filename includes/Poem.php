@@ -62,7 +62,7 @@ class Poem implements ParserFirstCallInitHook {
 		// the exact syntax for horizontal rules.
 		$text = preg_replace(
 			[ '/^\n/', '/\n$/D', '/(?<!^----)\n/m' ],
-			[ "", "", "$tag\n" ],
+			[ "", "", "$tag$newline" ],
 			$text
 		);
 
